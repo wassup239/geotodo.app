@@ -622,7 +622,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  align-items: start;
+  align-items: stretch;
 }
 
 @media (max-width: 700px) {
@@ -636,6 +636,8 @@ footer {
   padding: 24px;
   box-shadow: var(--shadow);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .tier-card.tier-featured {
@@ -650,6 +652,7 @@ footer {
 
 .tier-badge {
   display: inline-block;
+  align-self: flex-start;
   font-size: .68rem;
   font-weight: 800;
   letter-spacing: .5px;
@@ -702,6 +705,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  flex-grow: 1;
 }
 
 .tier-features li {
@@ -733,6 +737,35 @@ footer {
 
 .tier-features li.ai-feat {
   color: var(--text);
+}
+
+.tier-features li.coming-soon {
+  color: var(--text-3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tier-features li.coming-soon::before {
+  content: "◷";
+  position: absolute;
+  left: 0;
+  color: var(--text-3);
+  font-size: .8rem;
+}
+
+.soon-badge {
+  display: inline-block;
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text-3);
+  border-radius: 4px;
+  padding: 1px 6px;
+  flex-shrink: 0;
 }
 
 .tier-features li.ai-feat::before {

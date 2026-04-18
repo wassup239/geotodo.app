@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GeoToDo — Location-Based Reminders</title>
-  <meta name="description" content="GeoToDo reminds you of the right things at the right places. Set reminders tied to locations and never forget something again." />
+  <title>GeoToDo — AI-Powered Location &amp; Time Reminders</title>
+  <meta name="description" content="GeoToDo creates reminders from your voice, fires them when you arrive at a place or at a specific time, and checks items off without opening the app." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="icon.png" />
 </head>
@@ -15,7 +15,6 @@
   <div class="nav-inner">
     <a href="index.html" class="logo">
       <div class="logo-icon">
-        <!-- Pin + checkmark — matches new app icon -->
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
           <path d="M12 2C8.69 2 6 4.69 6 8c0 5.5 6 12.5 6 12.5S18 13.5 18 8c0-3.31-2.69-6-6-6z" fill="white"/>
           <path d="M9.5 7.8l1.8 1.8 3.2-3.2" stroke="#CC2828" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -40,15 +39,14 @@
     </div>
 
     <div class="app-icon-wrap">
-      <!-- Large hero pin + checkmark -->
       <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M32 4C21.5 4 13 12.5 13 23c0 14.5 19 37 19 37s19-22.5 19-37C51 12.5 42.5 4 32 4z" fill="white" opacity="0.97"/>
         <path d="M23 22.5l6.5 6.5 11.5-11" stroke="#CC2828" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
 
-    <h1>Reminders that know<br><span class="grad-text">where you are</span></h1>
-    <p>Stop forgetting things when you arrive somewhere. GeoToDo alerts you at the right place, every time — no timers needed.</p>
+    <h1>The reminder app that<br><span class="grad-text">thinks for you</span></h1>
+    <p>Just say "remind me to buy milk at the grocery store" — GeoToDo creates the reminder, picks up the location, and alerts you the moment you arrive. No fiddling with menus.</p>
 
     <div class="btn-group">
       <a href="#" class="btn btn-primary">
@@ -62,37 +60,154 @@
     </div>
   </div>
 
-  <!-- ── Features ─────────────────────────────────────────────────────────── -->
+  <!-- ── Three trigger types ─────────────────────────────────────────────── -->
+  <div class="section">
+    <div class="section-label">✦ How it works</div>
+    <h2>Three ways to get reminded</h2>
+    <p>GeoToDo covers every scenario — whether you need a location trigger, a calendar alert, or both at once.</p>
+
+    <div class="trigger-grid">
+      <div class="trigger-card">
+        <div class="trigger-icon trigger-loc">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#FF6B6B"/>
+            <circle cx="12" cy="9" r="2.5" fill="white"/>
+          </svg>
+        </div>
+        <div class="trigger-body">
+          <h3>Location</h3>
+          <p>Alert fires the moment you step near any grocery store, pharmacy, or any place you choose — even with your phone locked.</p>
+          <div class="trigger-example">"Remind me to buy milk at <em>any grocery store</em>"</div>
+        </div>
+      </div>
+
+      <div class="trigger-card">
+        <div class="trigger-icon trigger-time">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9" fill="#2563EB"/>
+            <path d="M12 7v5l3.5 2" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="trigger-body">
+          <h3>Date &amp; Time</h3>
+          <p>Schedule a one-time alert or set a recurring weekly schedule. Works like an alarm — fires exactly when you need it.</p>
+          <div class="trigger-example">"Remind me every Monday at 9 AM"</div>
+        </div>
+      </div>
+
+      <div class="trigger-card">
+        <div class="trigger-icon trigger-both">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+            <path d="M12 3C8.13 3 5 6.13 5 10c0 4.5 5.5 10 7 11.5C13.5 20 19 14.5 19 10c0-3.87-3.13-7-7-7z" fill="#F59E0B"/>
+            <circle cx="12" cy="10" r="2.2" fill="white"/>
+            <rect x="14.5" y="13" width="7" height="7" rx="2" fill="#2563EB"/>
+            <path d="M16 16.5l1.3 1.3 2.2-2.2" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="trigger-body">
+          <h3>Location + Time</h3>
+          <p>The geofence activates on a specific date and fires when you arrive. A fallback notification fires on that date even if you never reach the place.</p>
+          <div class="trigger-example">"Remind me Thursday — if I'm near the pharmacy"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── AI spotlight ────────────────────────────────────────────────────── -->
+  <div class="section">
+    <div class="section-label">✦ AI-Powered</div>
+    <h2>Create reminders<br>in seconds</h2>
+    <p>No menus. No forms. Just say what you need — GeoToDo's AI parses the time, location, and items automatically.</p>
+
+    <div class="ai-grid">
+      <div class="ai-card ai-card-primary">
+        <div class="ai-card-top">
+          <div class="ai-badge">Pro+</div>
+          <div class="ai-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path d="M12 3a9 9 0 1 0 0 18A9 9 0 0 0 12 3zm0 16a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm-1-5h2v2h-2zm0-8h2v6h-2z" fill="white" opacity=".4"/>
+              <circle cx="12" cy="12" r="4" fill="white"/>
+            </svg>
+          </div>
+          <h3>Voice Creation</h3>
+        </div>
+        <p>Tap the mic and speak naturally. Powered by Gemini AI, GeoToDo understands your intent and builds the reminder automatically — including time, location, and checklist items.</p>
+        <div class="voice-demo">
+          <div class="voice-bubble user">"Remind me to pick up dry cleaning at Tide Cleaners on Friday"</div>
+          <div class="voice-bubble bot">
+            <span class="bot-label">GeoToDo</span>
+            Created: "Pick up dry cleaning" · Specific place: Tide Cleaners · Date: Friday
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-side-cards">
+        <div class="ai-card">
+          <div class="ai-badge">Pro+</div>
+          <div class="feature-icon" style="margin-bottom:12px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#FF6B6B">
+              <path d="M19 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 3h5v2h-5V5zm0 3h5v1h-5V8zm-3-3h2v2h-2V5zm-1 7h9v2H8v-2zm0-3h2v2H8v-2zm2 3h1v2h-1v-2zM5 6H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2v-1H5V6z"/>
+            </svg>
+          </div>
+          <h3>Clipboard Paste</h3>
+          <p>Copy a reminder from a text, email, or note and paste it straight into GeoToDo. AI extracts the time, place, and items automatically.</p>
+        </div>
+
+        <div class="ai-card">
+          <div class="ai-badge">Pro+</div>
+          <div class="feature-icon" style="margin-bottom:12px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#FF6B6B">
+              <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.38-1 1.73V7h1a7 7 0 0 1 7 7h1v2h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2v-2h1a7 7 0 0 1 7-7h1V5.73A2 2 0 0 1 10 4a2 2 0 0 1 2-2zm0 7a5 5 0 0 0-5 5v3h10v-3a5 5 0 0 0-5-5z"/>
+            </svg>
+          </div>
+          <h3>AI Checklist Suggestions</h3>
+          <p>Give your reminder a title and GeoToDo suggests relevant checklist items. "Grocery run" gets a shopping list. "Pharmacy pickup" gets your prescriptions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Full feature grid ───────────────────────────────────────────────── -->
   <div class="section">
     <div class="section-label">✦ Features</div>
     <h2>Everything you need to<br>never forget again</h2>
-    <p>GeoToDo works silently in the background and fires the moment you step into a saved location.</p>
+    <p>GeoToDo works silently in the background, using adaptive GPS polling to save battery while staying sharp.</p>
 
     <div class="feature-grid">
       <div class="feature-card">
         <div class="feature-icon">
-          <!-- Location pin with checkmark -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M12 2C8.69 2 6 4.69 6 8c0 5.5 6 12.5 6 12.5S18 13.5 18 8c0-3.31-2.69-6-6-6z" fill="#FF6B6B"/>
             <path d="M9.5 7.8l1.8 1.8 3.2-3.2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <h3>Specific Place Reminders</h3>
-        <p>Pin any address or point of interest. GeoToDo alerts you the moment you arrive — even if you forgot you set it.</p>
+        <p>Pin any address or business. GeoToDo alerts you the moment you arrive — even if you forgot you set it.</p>
       </div>
+
       <div class="feature-card">
         <div class="feature-icon">
-          <!-- Category grid -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF6B6B">
             <path d="M12 2l-5.5 9h11L12 2zm0 3.84L13.93 9h-3.87L12 5.84zM17.5 13c-2.49 0-4.5 2.01-4.5 4.5S15.01 22 17.5 22 22 19.99 22 17.5 19.99 13 17.5 13zm0 7c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5zM3 21.5h8v-8H3v8zm2-6h4v4H5v-4z"/>
           </svg>
         </div>
         <h3>Category Triggers</h3>
-        <p>Set a reminder for "any grocery store" or "any pharmacy" and GeoToDo finds them near you automatically.</p>
+        <p>Set a reminder for "any grocery store" or "any pharmacy" — GeoToDo finds them near you automatically using Google Places.</p>
       </div>
+
       <div class="feature-card">
         <div class="feature-icon">
-          <!-- Checklist -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9" fill="#FF6B6B"/>
+            <path d="M12 7.5v4.5l3 1.8" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Date &amp; Time Alerts</h3>
+        <p>One-time or weekly recurring time-based reminders — a full calendar alarm inside your to-do app.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF6B6B">
             <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
           </svg>
@@ -100,35 +215,101 @@
         <h3>Built-in Checklists</h3>
         <p>Add checklist items to any reminder. Check them off right from the alert — no need to open the app.</p>
       </div>
+
       <div class="feature-card">
         <div class="feature-icon">
-          <!-- Repeat arrows -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF6B6B">
             <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>
           </svg>
         </div>
         <h3>Recurring Reminders</h3>
-        <p>Some reminders need to fire every time you visit. Set a cooldown period and GeoToDo handles the rest.</p>
+        <p>Set a cooldown period and GeoToDo re-alerts you on every visit, every week — whatever cadence you need.</p>
       </div>
+
       <div class="feature-card">
         <div class="feature-icon">
-          <!-- Bedtime moon -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF6B6B">
             <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-5.4-5.4c0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
           </svg>
         </div>
         <h3>Smart Snooze</h3>
-        <p>Not the right moment? Snooze any alert for hours or days. It will resurface right on schedule.</p>
+        <p>Not the right moment? Snooze any alert for minutes, hours, or days. It resurfaces right on schedule.</p>
       </div>
+
       <div class="feature-card">
         <div class="feature-icon">
-          <!-- Tune / sliders -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF6B6B">
             <path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/>
           </svg>
         </div>
         <h3>Custom Categories</h3>
-        <p>Create your own location categories — your regular spots, favourite coffee shops, or work sites.</p>
+        <p>Create your own location groups — regular spots, favourite coffee shops, work sites — with manual pins or Google search.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF6B6B">
+            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+          </svg>
+        </div>
+        <h3>Drives Through DND</h3>
+        <p>Alerts use a high-priority channel that can bypass Android driving mode and iOS Focus — so you never miss a reminder while in the car.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Pricing ─────────────────────────────────────────────────────────── -->
+  <div class="section">
+    <div class="section-label">✦ Pricing</div>
+    <h2>Start free.<br>Upgrade when you're ready.</h2>
+    <p>GeoToDo is free to try. One-time Pro unlocks the full location experience. Pro+ adds AI creation.</p>
+
+    <div class="pricing-grid">
+      <div class="tier-card">
+        <div class="tier-name">Free</div>
+        <div class="tier-price">$0</div>
+        <div class="tier-desc">Forever free</div>
+        <ul class="tier-features">
+          <li class="ok">Up to 5 active reminders</li>
+          <li class="ok">Location &amp; time triggers</li>
+          <li class="ok">Built-in categories</li>
+          <li class="ok">Checklist items</li>
+          <li class="no">Specific place reminders (1 max)</li>
+          <li class="no">Recurring reminders</li>
+          <li class="no">Custom categories</li>
+          <li class="no">AI voice &amp; clipboard</li>
+        </ul>
+      </div>
+
+      <div class="tier-card tier-featured">
+        <div class="tier-badge">Most Popular</div>
+        <div class="tier-name">Pro</div>
+        <div class="tier-price">$9.99 <span>one-time</span></div>
+        <div class="tier-desc">Pay once, keep forever</div>
+        <ul class="tier-features">
+          <li class="ok">Unlimited reminders</li>
+          <li class="ok">All location &amp; time triggers</li>
+          <li class="ok">All radius options</li>
+          <li class="ok">Unlimited specific places</li>
+          <li class="ok">Recurring &amp; weekly schedules</li>
+          <li class="ok">Custom categories</li>
+          <li class="ok">Smart item suggestions</li>
+          <li class="no">AI voice &amp; clipboard</li>
+        </ul>
+      </div>
+
+      <div class="tier-card tier-plus">
+        <div class="tier-name">Pro<span class="plus-text">+</span></div>
+        <div class="tier-price">$11.99 <span>/ year</span></div>
+        <div class="tier-desc">Everything in Pro, plus AI</div>
+        <ul class="tier-features">
+          <li class="ok">Everything in Pro</li>
+          <li class="ok ai-feat">Voice reminder creation (AI)</li>
+          <li class="ok ai-feat">Clipboard paste parsing (AI)</li>
+          <li class="ok ai-feat">AI checklist suggestions</li>
+          <li class="ok">Google Places custom category search</li>
+          <li class="ok">Navigate to saved location</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -144,7 +325,7 @@
       <div>
         <h3 style="margin-bottom:8px;">Your data stays on your device</h3>
         <p style="color:var(--text-2); font-size:.93rem; line-height:1.65;">
-          GeoToDo stores all your reminders and location data locally. Nothing is uploaded to our servers. Location is processed entirely on-device — we never see where you are.
+          GeoToDo stores all reminders and location data locally — nothing is uploaded to our servers. Location is processed entirely on-device. AI voice and clipboard features send only the text you choose to Gemini; your GPS coordinates are never included.
         </p>
         <a href="privacy.html" style="display:inline-block; margin-top:12px; font-size:.85rem; font-weight:600; color:var(--red); text-decoration:none;">Read our Privacy Policy →</a>
       </div>

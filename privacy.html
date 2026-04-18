@@ -52,7 +52,7 @@
       <span class="info-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF6B6B"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
       </span>
-      <span><strong>Short version:</strong> GeoToDo stores all your reminders and location data locally on your device. We do not run servers that receive or store your personal data. The only data that leaves your device is for payments (RevenueCat) and location search (Google Places), described in detail below.</span>
+      <span><strong>Short version:</strong> GeoToDo stores all your reminders and location data locally on your device. We do not run servers that receive or store your personal data. The only data that leaves your device is for payments (RevenueCat), location search (Google Places), and AI voice/clipboard features (Gemini AI — text only, never your GPS location), described in detail below. You can delete all your data at any time from Settings.</span>
     </div>
 
     <h2>
@@ -123,11 +123,40 @@
 
     <h2>
       <span class="h-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FF6B6B"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
+      </span>
+      AI Voice &amp; Clipboard — Gemini AI
+    </h2>
+    <p>GeoToDo Pro+ includes AI-powered reminder creation via voice dictation and clipboard paste, powered by <strong>Google Gemini AI</strong>. Here is exactly what is and is not shared:</p>
+    <ul>
+      <li><strong>What is sent to Gemini:</strong> The transcribed text of your voice input, or the text you paste from the clipboard. This is plain text only — for example, "remind me to pick up dry cleaning at Tide Cleaners on Friday".</li>
+      <li><strong>What is never sent:</strong> Your GPS coordinates, saved reminder data, or any other personal information. Location data stays on device at all times.</li>
+      <li><strong>How it works:</strong> Gemini parses the text to extract the task, location name, date/time, and checklist items. The raw text is sent to Google's Gemini API over HTTPS and is subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+      <li><strong>Opt-in only:</strong> AI features are only activated when you explicitly tap the microphone button or the clipboard paste button. The app never silently records or transmits your voice or clipboard.</li>
+      <li><strong>Microphone access:</strong> The microphone is used only for the duration of active voice input. No audio is stored on your device or sent anywhere — only the final transcribed text string is processed by Gemini.</li>
+    </ul>
+    <p>Google's use of data sent to the Gemini API is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> and <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Terms of Service</a>.</p>
+
+    <h2>
+      <span class="h-icon">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="#FF6B6B"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
       </span>
       Notifications
     </h2>
-    <p>GeoToDo sends local notifications when you enter a saved geofence. These notifications are generated entirely on-device — no notification content is routed through our servers.</p>
+    <p>GeoToDo sends local notifications when you enter a saved geofence or when a scheduled time alert fires. These notifications are generated entirely on-device — no notification content is routed through our servers.</p>
+
+    <h2>
+      <span class="h-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FF6B6B"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+      </span>
+      Deleting Your Data
+    </h2>
+    <p>You have full control over your data. There are two ways to remove it:</p>
+    <ul>
+      <li><strong>Delete all data in-app:</strong> Go to Settings → About → "Delete all my data". This permanently wipes all your reminders, checklist items, saved locations, and preferences from your device in one action. This cannot be undone.</li>
+      <li><strong>Uninstall the app:</strong> Uninstalling GeoToDo removes the local database and all associated app data from your device.</li>
+    </ul>
+    <p>Because we hold no personal data on our servers, there is nothing to request deletion of from us. Third-party services (Google Places, RevenueCat, Gemini) retain only anonymised or transactional data governed by their own policies — contact them directly for deletion requests.</p>
 
     <h2>
       <span class="h-icon">

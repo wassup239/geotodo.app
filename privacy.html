@@ -42,7 +42,7 @@
     <p>We believe privacy is a right, not a feature. Here is exactly what GeoToDo collects, why, and what we never do.</p>
     <div class="updated">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
-      Last updated: April 2026
+      Last updated: April 24, 2026
     </div>
   </div>
 
@@ -52,7 +52,7 @@
       <span class="info-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF6B6B"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
       </span>
-      <span><strong>Short version:</strong> GeoToDo stores all your reminders and location data locally on your device. We do not run servers that receive or store your personal data. The only data that leaves your device is for payments (RevenueCat), location search (Google Places), and AI voice/clipboard features (Gemini AI — text only, never your GPS location), described in detail below. You can delete all your data at any time from Settings.</span>
+      <span><strong>Short version:</strong> GeoToDo stores your reminders and location data locally on your device by default. Pro and Pro+ subscribers can optionally enable <strong>cloud backup</strong>, which syncs your data to Firebase (Google). Your GPS coordinates are never transmitted to our servers or to Firebase — only reminder text, settings, and saved location names/coordinates you explicitly enter. The only other data that leaves your device is for payments (RevenueCat), location search (Google Places), and AI voice/clipboard features (Gemini AI — text only). You can delete all your data, including cloud backups, at any time from Settings.</span>
     </div>
 
     <h2>
@@ -61,7 +61,7 @@
       </span>
       Who We Are
     </h2>
-    <p>GeoToDo is developed and operated by <strong>NomNom Labs</strong>. If you have any questions about this policy, contact us at <a href="mailto:privacy@geotodo.app">privacy@geotodo.app</a>.</p>
+    <p>GeoToDo is developed and operated by <strong>NomNom Bites LLC</strong>. If you have any questions about this policy, contact us at <a href="mailto:hello@nomnombites.cc">hello@nomnombites.cc</a>.</p>
 
     <h2>
       <span class="h-icon">
@@ -83,14 +83,15 @@
       </span>
       Data Stored on Your Device
     </h2>
-    <p>All app data is stored locally in a SQLite database on your device. This includes:</p>
+    <p>All app data is stored locally in a SQLite database on your device by default. This includes:</p>
     <ul>
       <li>Reminder text, checklist items, and settings</li>
-      <li>Coordinates and names of saved locations</li>
+      <li>Coordinates and names of saved locations you explicitly enter</li>
       <li>Reminder status (active, snoozed, archived)</li>
       <li>App preferences (theme, units)</li>
     </ul>
-    <p>This data is <strong>not uploaded to any server</strong>. It is subject to your device's standard backup settings (iCloud on iOS, Google Drive on Android). You can delete all data by uninstalling the app.</p>
+    <p><strong>Cloud Backup (Pro and Pro+ only — opt-in):</strong> If you sign in with Google or Apple and enable cloud sync, the above data is also stored in Firebase Firestore (Google Cloud) under your account. This allows you to restore your reminders on a new device. Your GPS coordinates are never stored in the cloud — only the named locations and coordinates of places you have explicitly saved (e.g. "Home — 123 Main St"). You can sign out or use "Unsync this device" in Settings at any time to stop cloud sync. Deleting all data from Settings also deletes your cloud backup.</p>
+    <p>Local data is subject to your device's standard backup settings (iCloud on iOS, Google Drive on Android). You can delete all local data by uninstalling the app.</p>
 
     <h2>
       <span class="h-icon">
@@ -106,6 +107,22 @@
       <li>App version and platform (iOS/Android)</li>
     </ul>
     <p>RevenueCat does <strong>not</strong> receive your location data. Their privacy policy is available at <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a>.</p>
+
+    <h2>
+      <span class="h-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FF6B6B"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+      </span>
+      Cloud Backup — Firebase (Google)
+    </h2>
+    <p>For Pro and Pro+ subscribers who enable cloud sync, GeoToDo uses <strong>Firebase</strong> (Google Cloud) to store and sync your data across devices.</p>
+    <ul>
+      <li><strong>Authentication:</strong> Sign in with Google or Apple is handled by Firebase Authentication. We receive your name, email address, and a unique user ID from your chosen provider.</li>
+      <li><strong>Data stored:</strong> Your reminders (text, checklist items, location trigger settings), saved location names and coordinates, and custom place groups are stored in Firebase Firestore under your unique user ID.</li>
+      <li><strong>Access control:</strong> Your data is protected by Firestore security rules — only you can read or write your own documents.</li>
+      <li><strong>GPS coordinates:</strong> Your live GPS position is never sent to Firebase. The coordinates stored are only for places you have explicitly saved as reminder locations.</li>
+      <li><strong>Deletion:</strong> Using "Delete all my data" in Settings permanently deletes all your Firestore documents, not just local data.</li>
+    </ul>
+    <p>Firebase is operated by Google. Their privacy policy is available at <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a>.</p>
 
     <h2>
       <span class="h-icon">
@@ -151,12 +168,13 @@
       </span>
       Deleting Your Data
     </h2>
-    <p>You have full control over your data. There are two ways to remove it:</p>
+    <p>You have full control over your data:</p>
     <ul>
-      <li><strong>Delete all data in-app:</strong> Go to Settings → About → "Delete all my data". This permanently wipes all your reminders, checklist items, saved locations, and preferences from your device in one action. This cannot be undone.</li>
-      <li><strong>Uninstall the app:</strong> Uninstalling GeoToDo removes the local database and all associated app data from your device.</li>
+      <li><strong>Delete all data in-app:</strong> Go to Settings → "Delete all my data". This permanently wipes all your reminders, checklist items, saved locations, and preferences — from your device <em>and</em> from Firebase cloud backup (if sync is enabled). This cannot be undone.</li>
+      <li><strong>Sign out / unsync:</strong> Go to Settings → Account → "Sign out" to stop syncing. Your local data is preserved. Use "Unsync this device" to detach the device from cloud sync while keeping all local data.</li>
+      <li><strong>Uninstall the app:</strong> Uninstalling GeoToDo removes the local database and all associated app data from your device. Your Firebase cloud backup (if any) remains until you delete it via Settings or contact us.</li>
     </ul>
-    <p>Because we hold no personal data on our servers, there is nothing to request deletion of from us. Third-party services (Google Places, RevenueCat, Gemini) retain only anonymised or transactional data governed by their own policies — contact them directly for deletion requests.</p>
+    <p>To request deletion of your Firebase cloud data without reinstalling, email us at <a href="mailto:hello@nomnombites.cc">hello@nomnombites.cc</a> and we will delete it within a reasonable time. Third-party services (Google Places, RevenueCat, Gemini) retain only anonymised or transactional data governed by their own policies — contact them directly for those deletion requests.</p>
 
     <h2>
       <span class="h-icon">
@@ -190,7 +208,8 @@
       Contact
     </h2>
     <p>Questions about this privacy policy? We are happy to help.</p>
-    <p><strong>Email:</strong> <a href="mailto:privacy@geotodo.app">privacy@geotodo.app</a></p>
+    <p><strong>Email:</strong> <a href="mailto:hello@nomnombites.cc">hello@nomnombites.cc</a></p>
+    <p><strong>Company:</strong> NomNom Bites LLC</p>
 
   </div>
 </div>
@@ -210,7 +229,7 @@
     <ul class="footer-links">
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms of Service</a></li>
-      <li><a href="mailto:hello@geotodo.app">Contact</a></li>
+      <li><a href="mailto:hello@nomnombites.cc">Contact</a></li>
     </ul>
     <p class="footer-copy">&copy; 2026 GeoToDo. All rights reserved.</p>
   </div>

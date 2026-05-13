@@ -1,35 +1,36 @@
 /* ── GeoToDo website — shared styles ───────────────────────────────────── */
 
 :root {
-  --red:    #FF6B6B;
-  --amber:  #F59E0B;
-  --grad:   linear-gradient(135deg, #FF6B6B 0%, #F59E0B 100%);
-  --grad-h: linear-gradient(135deg, #ff5252 0%, #e08e00 100%);
+  --primary: #006DFF;
+  --teal:    #00D084;
+  --cyan:    #00CFF8;
+  --grad:    linear-gradient(135deg, #006DFF 0%, #00CFF8 50%, #00D084 100%);
+  --grad-h:  linear-gradient(135deg, #0057CC 0%, #009FC8 50%, #00A86C 100%);
 
-  --bg:        #f8f8fa;
+  --bg:        #f5faff;
   --surface:   #ffffff;
-  --surface2:  #f1f1f5;
-  --border:    #e4e4ea;
-  --text:      #1a1a2e;
-  --text-2:    #5a5a7a;
-  --text-3:    #8888aa;
+  --surface2:  #eaf3ff;
+  --border:    #cce0f5;
+  --text:      #091929;
+  --text-2:    #486880;
+  --text-3:    #7090a8;
   --radius:    16px;
   --radius-sm: 10px;
-  --shadow:    0 2px 16px rgba(0,0,0,.08);
-  --shadow-lg: 0 8px 40px rgba(0,0,0,.13);
+  --shadow:    0 2px 16px rgba(0,109,255,.07);
+  --shadow-lg: 0 8px 40px rgba(0,109,255,.15);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:       #0f0f18;
-    --surface:  #1c1c2e;
-    --surface2: #252538;
-    --border:   #2e2e48;
-    --text:     #f0f0f8;
-    --text-2:   #a0a0c0;
-    --text-3:   #606080;
-    --shadow:    0 2px 16px rgba(0,0,0,.4);
-    --shadow-lg: 0 8px 40px rgba(0,0,0,.5);
+    --bg:       #030E1A;
+    --surface:  #061927;
+    --surface2: #0D2840;
+    --border:   #193A55;
+    --text:     #E8F4FF;
+    --text-2:   #7AB2D4;
+    --text-3:   #3D6E8C;
+    --shadow:    0 2px 16px rgba(0,0,0,.5);
+    --shadow-lg: 0 8px 40px rgba(0,109,255,.2);
   }
 }
 
@@ -176,7 +177,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 12px 48px rgba(255, 107, 107, .35);
+  box-shadow: 0 12px 48px rgba(0, 109, 255, .35);
 }
 
 .app-icon-wrap svg { width: 64px; height: 64px; }
@@ -209,9 +210,9 @@ nav {
 .btn-primary {
   background: var(--grad);
   color: #fff;
-  box-shadow: 0 4px 20px rgba(255,107,107,.4);
+  box-shadow: 0 4px 20px rgba(0,109,255,.35);
 }
-.btn-primary:hover { box-shadow: 0 6px 28px rgba(255,107,107,.55); }
+.btn-primary:hover { box-shadow: 0 6px 28px rgba(0,109,255,.5); }
 
 .btn-outline {
   background: var(--surface);
@@ -219,7 +220,7 @@ nav {
   border: 1.5px solid var(--border);
   box-shadow: var(--shadow);
 }
-.btn-outline:hover { border-color: var(--red); color: var(--red); }
+.btn-outline:hover { border-color: var(--primary); color: var(--primary); }
 
 /* ── Section headings ─────────────────────────────────────────────────────── */
 .section { margin-top: 72px; }
@@ -271,7 +272,7 @@ nav {
   width: 44px;
   height: 44px;
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, rgba(255,107,107,.15), rgba(245,158,11,.15));
+  background: linear-gradient(135deg, rgba(0,109,255,.12), rgba(0,208,132,.12));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -338,7 +339,7 @@ nav {
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background: linear-gradient(135deg, rgba(255,107,107,.2), rgba(245,158,11,.2));
+  background: linear-gradient(135deg, rgba(0,109,255,.15), rgba(0,208,132,.15));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -359,14 +360,14 @@ nav {
 
 .prose li { margin-bottom: 6px; }
 
-.prose a { color: var(--red); text-decoration: none; }
+.prose a { color: var(--primary); text-decoration: none; }
 .prose a:hover { text-decoration: underline; }
 
 .prose strong { color: var(--text); font-weight: 600; }
 
 .info-box {
-  background: linear-gradient(135deg, rgba(255,107,107,.08), rgba(245,158,11,.08));
-  border: 1px solid rgba(255,107,107,.2);
+  background: linear-gradient(135deg, rgba(0,109,255,.07), rgba(0,208,132,.07));
+  border: 1px solid rgba(0,109,255,.2);
   border-radius: var(--radius-sm);
   padding: 16px 20px;
   margin: 20px 0;
@@ -445,9 +446,9 @@ footer {
   flex-shrink: 0;
 }
 
-.trigger-loc  { background: rgba(255, 107, 107, .12); }
-.trigger-time { background: rgba(37, 99, 235, .10); }
-.trigger-both { background: rgba(245, 158, 11, .12); }
+.trigger-loc  { background: rgba(0, 109, 255, .10); }
+.trigger-time { background: rgba(0, 208, 132, .10); }
+.trigger-both { background: rgba(0, 207, 248, .10); }
 
 .trigger-body h3 {
   font-size: 1rem;
@@ -474,7 +475,7 @@ footer {
 
 .trigger-example em {
   font-style: normal;
-  color: var(--red);
+  color: var(--primary);
   font-weight: 600;
 }
 
@@ -500,13 +501,13 @@ footer {
 }
 
 .ai-card-primary {
-  background: linear-gradient(145deg, #1c1c3a 0%, #2a1a3a 100%);
-  border-color: rgba(255, 107, 107, .25);
-  color: #f0f0f8;
+  background: linear-gradient(145deg, #061927 0%, #0D2840 100%);
+  border-color: rgba(0, 109, 255, .3);
+  color: #E8F4FF;
 }
 
 .ai-card-primary p {
-  color: rgba(240, 240, 248, .75);
+  color: rgba(232, 244, 255, .75);
   font-size: .875rem;
   line-height: 1.6;
   margin-bottom: 16px;
@@ -522,14 +523,14 @@ footer {
 .ai-card-top h3 {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #f0f0f8;
+  color: #E8F4FF;
 }
 
 .ai-icon {
   width: 44px;
   height: 44px;
   border-radius: var(--radius-sm);
-  background: rgba(255, 107, 107, .25);
+  background: rgba(0, 207, 248, .2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -590,15 +591,15 @@ footer {
 }
 
 .voice-bubble.user {
-  background: rgba(255, 107, 107, .18);
-  color: rgba(240, 240, 248, .9);
+  background: rgba(0, 109, 255, .2);
+  color: rgba(232, 244, 255, .9);
   align-self: flex-end;
   border-bottom-right-radius: 4px;
 }
 
 .voice-bubble.bot {
   background: rgba(255, 255, 255, .08);
-  color: rgba(240, 240, 248, .85);
+  color: rgba(232, 244, 255, .85);
   align-self: flex-start;
   border-bottom-left-radius: 4px;
   display: flex;
@@ -641,13 +642,13 @@ footer {
 }
 
 .tier-card.tier-featured {
-  border-color: var(--red);
-  box-shadow: 0 0 0 1px var(--red), var(--shadow-lg);
+  border-color: var(--teal);
+  box-shadow: 0 0 0 1px var(--teal), var(--shadow-lg);
 }
 
 .tier-card.tier-plus {
-  background: linear-gradient(145deg, rgba(255,107,107,.07), rgba(245,158,11,.07));
-  border-color: rgba(245, 158, 11, .4);
+  background: linear-gradient(145deg, rgba(0,109,255,.06), rgba(0,208,132,.06));
+  border-color: rgba(0, 208, 132, .4);
 }
 
 .tier-badge {
